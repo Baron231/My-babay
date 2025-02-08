@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>موقع الحب</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-image: url('https://your-image-url.com/background-couple.jpg'); /* ضع هنا رابط صورة الخلفية */
+      background-size: cover;
+      text-align: center;
+      padding: 50px;
+      transition: background-color 2s ease;
+      color: white;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.5);
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #ff4d88;
+      font-family: 'Cursive', sans-serif;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .btn {
+      background-color: #ff4d88;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      font-size: 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin: 20px;
+      transition: background-color 0.3s ease;
+      font-family: 'Cursive', sans-serif;
+    }
+
+    .btn:hover {
+      background-color: #e64d7f;
+    }
+
+    #emojis {
+      font-size: 2em;
+      display: none;
+      animation: emojiAnimation 3s infinite;
+    }
+
+    @keyframes emojiAnimation {
+      0% { transform: translateY(0); }
+      25% { transform: translateY(-20px); }
+      50% { transform: translateY(20px); }
+      75% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    #angryEmoji {
+      font-size: 3em;
+      display: none;
+      color: red;
+    }
+
+    #footer {
+      margin-top: 30px;
+      font-size: 1.2em;
+      color: #ff4d88;
+      font-family: 'Cursive', sans-serif;
+    }
+
+    .zakhrafa {
+      font-size: 1.5em;
+      color: #ff99cc;
+      animation: floating 2s infinite ease-in-out;
+    }
+
+    @keyframes floating {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>مرحبا حبيبتي ربيبتي دبدوبتي الغالية، هل تحبيني؟</h1>
+
+    <button class="btn" onclick="respondYes()">نعم</button>
+    <button class="btn" onclick="respondNo()">لا</button>
+
+    <div id="emojis">😍💖💋✨</div>
+    <div id="angryEmoji">😡</div>
+    <div id="zakhrafa" class="zakhrafa" style="display: none;">❤️🌹🌸💐💖</div>
+  </div>
+
+  <div id="footer">
+    حبيب الروح أنس
+  </div>
+
+  <script>
+    function respondYes() {
+      // تغيير اللون وتغيير الخلفية للأحمر الفاتح
+      document.body.style.backgroundColor = "#ff80ab";
+      document.getElementById("emojis").style.display = "block"; // عرض الأيموجي المتطاير
+      document.getElementById("zakhrafa").style.display = "block"; // عرض الزخرفة
+      setTimeout(function() {
+        document.body.style.backgroundColor = "#ffb3c1"; // العودة إلى اللون الأصلي
+      }, 3000);
+    }
+
+    function respondNo() {
+      // عند الضغط على زر "لا" تظهر الإيموجي الغاضب
+      document.getElementById("angryEmoji").style.display = "block";
+      setTimeout(function() {
+        document.getElementById("angryEmoji").style.display = "none"; // إخفاء الإيموجي بعد فترة قصيرة
+      }, 1500);
+    }
+  </script>
+
+</body>
+</html>
